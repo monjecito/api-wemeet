@@ -298,7 +298,7 @@ function updateUser(req, res) {
     //Evitar actualización de duplicados
     User.findOne({ 
         $or: [
-            { email: update.email.toLowerCase() },
+            
             { nick: update.nick.toLowerCase() }         
         ]
     }).exec((err, users) => {
