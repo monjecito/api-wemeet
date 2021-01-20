@@ -1,1 +1,1 @@
-web: nodemon index.js
+start: nodemon index.js
