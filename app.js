@@ -27,11 +27,11 @@ app.use((req, res, next) => {
 });
 
 //RUTAS
-app.use('https://we-meetback.herokuapp.com/',user_routes);
-app.use('https://we-meetback.herokuapp.com/',follow_routes);
-app.use('https://we-meetback.herokuapp.com/',publication_routes);
-app.use('https://we-meetback.herokuapp.com/',message_routes);
-app.use('https://we-meetback.herokuapp.com/',likes_routes);
+app.use('/api',user_routes);
+app.use('/api',follow_routes);
+app.use('/api',publication_routes);
+app.use('/api',message_routes);
+app.use('/api',likes_routes);
 
 //EXPORTAR
 module.exports=app;
