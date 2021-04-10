@@ -1,19 +1,19 @@
 'use strict'
 var mongoose = require('mongoose');
 var app = require('./app');
-var PORT = process.env.PORT||8080;
-const uri = "mongodb+srv://monjecito:deportivogu@we-meet.fdih6.mongodb.net/red-social?retryWrites=true&w=majority";
+var port = 3800;
+
 //CONEXION DATABASE
 
 mongoose.set('useFindAndModify', false);
 mongoose.Promise = global.Promise;
-mongoose.connect(uri,{useNewUrlParser:true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/red-social',{useNewUrlParser:true, useUnifiedTopology: true })
     .then(() => {
         console.log('Servidor de la red social corriendo correctamente');
 
         //CREAR SERVIDOR
-        app.listen(PORT,()=>{
-            console.log('Servidor corriendo');
+        app.listen(port,()=>{
+            console.log('Servidor corriendo en http://localhost:3800');
         });
 
 

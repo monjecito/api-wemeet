@@ -1,11 +1,11 @@
 {
   "name": "red-social",
   "version": "1.0.0",
-  "description": "Proyecto final",
-  "main": "node index",
+  "description": "Red social proyecto final",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "start": "nodemon index.js"
   },
   "author": "Diego Monje",
   "license": "MIT",
